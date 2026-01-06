@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NwellsTechHub</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        /* Reset & Base */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        html {scroll-behavior: smooth;}
+        body {font-family: 'Roboto', sans-serif; line-height:1.6; background:#f7f7f7; color:#333;}
+        a {text-decoration:none; color:inherit;}
+        img {max-width:100%; display:block;}
+
+        /* Header */
+        header {background:#111; color:#fff; padding:20px 0; position:sticky; top:0; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.3);}
+        .container {width:90%; max-width:1200px; margin:0 auto;}
+        nav {display:flex; justify-content:space-between; align-items:center;}
+        nav ul {list-style:none; display:flex; gap:25px;}
+        nav ul li {transition:0.3s;}
+        nav ul li:hover {transform:scale(1.1);}
+        .logo {font-family:'Montserrat', sans-serif; font-size:1.8rem; font-weight:700; color:#00bcd4;}
+
+        /* Hero Section */
+        .hero {display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 20px; background: linear-gradient(135deg, #00bcd4, #1a1a1a); color:#fff;}
+        .hero h1 {font-size:3rem; margin-bottom:20px; opacity:0; transform:translateY(-20px); animation:fadeInUp 1s forwards;}
+        .hero p {font-size:1.2rem; margin-bottom:30px; opacity:0; transform:translateY(20px); animation:fadeInUp 1.2s forwards;}
+        .hero a {background:#fff; color:#1a1a1a; padding:14px 35px; border-radius:30px; font-weight:bold; transition:0.3s; opacity:0; transform:scale(0.8); animation:fadeInUp 1.4s forwards;}
+        .hero a:hover {background:#00bcd4; color:#fff;}
+
+        @keyframes fadeInUp {
+            to {opacity:1; transform:translateY(0) scale(1);}
+        }
+
+        /* Services Section */
+        .services {padding:80px 20px; background:#fff;}
+        .services h2 {text-align:center; font-size:2.5rem; margin-bottom:50px; color:#1a1a1a; opacity:0; animation:fadeInUp 1s forwards;}
+        .service-carousel {display:flex; gap:20px; opacity:0; animation:fadeInUp 1.2s forwards;}
+        .card {background:#f0f0f0; padding:30px; border-radius:15px; text-align:center; transition:0.3s; cursor:pointer;}
+        .card:hover {transform:translateY(-10px); background:#00bcd4; color:#fff;}
+        .card i {font-size:3rem; margin-bottom:20px; color:#00bcd4;}
+        .card:hover i {color:#fff;}
+        .card h3 {margin-bottom:15px; font-size:1.5rem;}
+        .card p {font-size:1rem;}
+
+        /* Contact Section */
+        .contact {padding:80px 20px; background:#1a1a1a; color:#fff;}
+        .contact h2 {text-align:center; font-size:2.5rem; margin-bottom:50px; opacity:0; animation:fadeInUp 1s forwards;}
+        .contact form {max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:20px; opacity:0; animation:fadeInUp 1.2s forwards;}
+        .contact input, .contact textarea {padding:15px; border:none; border-radius:10px; font-size:1rem;}
+        .contact input:focus, .contact textarea:focus {outline:none; box-shadow:0 0 5px #00bcd4;}
+        .contact button {padding:15px; background:#00bcd4; color:#fff; border:none; border-radius:30px; font-size:1rem; font-weight:bold; cursor:pointer; transition:0.3s;}
+        .contact button:hover {background:#fff; color:#1a1a1a;}
+
+        /* Footer */
+        footer {text-align:center; padding:20px; background:#111; color:#fff;}
+        footer a {color:#00bcd4;}
+        footer a:hover {text-decoration:underline;}
+
+        /* WhatsApp Floating Button */
+        .whatsapp-btn {
+            position:fixed;
+            bottom:30px;
+            right:30px;
+            background:#25D366;
+            color:#fff;
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:2rem;
+            z-index:1000;
+            box-shadow:0 4px 8px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+        .whatsapp-btn:hover {transform:scale(1.1);}
+
+        /* Carousel Arrows */
+        .slick-prev:before, .slick-next:before {color:#00bcd4; font-size:30px;}
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><i class="fas fa-robot"></i> NwellsTechHub</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to NwellsTechHub</h1>
+        <p>Your hub for innovative solutions in technology, digital marketing, and robotics.</p>
+        <a href="#contact">Get in Touch</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-carousel">
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Software Solutions</h3>
+                <p>Custom software to elevate your business and optimize performance.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Digital Marketing</h3>
+                <p>Grow your brand online with our expert marketing strategies.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-robot"></i>
+                <h3>Robotics Lab</h3>
+                <p>Innovative robotics projects and automation solutions for all industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NwellsTechHub. All Rights Reserved. | Designed by <a href="#">NwellsTechHub</a></p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/234000000000" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.service-carousel').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                dots: true,
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 2 }},
+                    { breakpoint: 768, settings: { slidesToShow: 1 }}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
